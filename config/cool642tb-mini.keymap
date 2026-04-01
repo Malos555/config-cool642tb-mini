@@ -180,12 +180,17 @@
         };
 
         //Left row4
-        coShAl {
-            bindings = <&kp LC(LSHIFT)>;
-            key-positions = <44 45>;
+        coCtAl {
+            bindings = <&kp LC(LALT)>;
+            key-positions = <43 44>;
             layers = <0 1 2 3 4>;
         };
 
+        coShAl {
+            bindings = <&kp LS(LALT)>;
+            key-positions = <44 45>;
+            layers = <0 1 2 3 4>;
+        };
 
         //Right row1
         coPageupShiftTab {
@@ -499,7 +504,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp LC(LALT)>, <&kp LS(LALT)>;
+            bindings = <&kp LC(LSHIFT)>, <&kp LC(LALT)>, <&kp LS(LALT);
         };
 
         tdCtrlTdIme: tap_ctrl_td_ime {
