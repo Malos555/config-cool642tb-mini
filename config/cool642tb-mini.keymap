@@ -505,7 +505,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <1000>;
-            bindings = <&kp LC(LSHIFT)>, <&kp LC(LALT)>, <&kp LS(LALT);
+            bindings = <&kp LC(LSHIFT)>, <&kp LC(LALT)>, <&kp LS(LALT)>;
         };
 
         tdCtrlTdIme: tap_ctrl_td_ime {
