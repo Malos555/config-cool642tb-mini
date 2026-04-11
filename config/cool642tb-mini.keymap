@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
@@ -34,6 +33,7 @@
 #define JP_BSLH         INT1              // (backslash)
 
 // new define
+
 #define JP_EXCL  LS(N1)            // !
 #define JP_QUESTION     LS(SLASH)         // ?
 #define JP_HASH         LS(N3)            // #
@@ -41,7 +41,6 @@
 #define JP_PERCENT      LS(N5)            // %
 #define JP_LT           LS(COMMA)         // <
 #define JP_GT           LS(DOT)           // >
-
 #define WIN_CLIP        LG(V)             // CLIPBOARD
 #define WIN_VOICE       LG(H)             // input voice
 #define WIN_PS          LG(LS(T))         // print screen
@@ -74,53 +73,49 @@
         maCScrlUp: macro_ctrl_scroll_up {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &msc SCRL_UP >
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&msc SCRL_UP>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
 
         maCScrlDown: macro_ctrl_scroll_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &msc SCRL_DOWN >
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&msc SCRL_DOWN>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
 
         maSendCal: macro_send_cal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp JP_BACKQUOTE &kp C &kp A &kp L>
-                ;
+            bindings = <&macro_tap>, <&kp JP_BACKQUOTE &kp C &kp A &kp L>;
         };
 
         maSendNot: macro_send_not {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp JP_EXCL &kp JP_EQUAL>
-                ;
+            bindings = <&macro_tap>, <&kp JP_EXCL &kp JP_EQUAL>;
         };
 
         maSendLe: macro_send_le {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp JP_LT &kp JP_EQUAL>
-                ;
+            bindings = <&macro_tap>, <&kp JP_LT &kp JP_EQUAL>;
         };
 
         maSendGe: macro_send_ge {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp JP_GT &kp JP_EQUAL>
-                ;
+            bindings = <&macro_tap>, <&kp JP_GT &kp JP_EQUAL>;
         };
     };
 
@@ -129,6 +124,7 @@
 
         // combos layer0
         //Left row1
+
         coEsc {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
@@ -148,6 +144,7 @@
         };
 
         //Left row2
+
         coBs {
             bindings = <&kp BACKSPACE>;
             key-positions = <11 12>;
@@ -167,6 +164,7 @@
         };
 
         //Left row3
+
         coLang1 {
             bindings = <&kp LANG1>;
             key-positions = <23 24>;
@@ -180,6 +178,7 @@
         };
 
         //Left row4
+
         coCtAl {
             bindings = <&kp LC(LALT)>;
             key-positions = <43 44>;
@@ -193,6 +192,7 @@
         };
 
         //Right row1
+
         coPageupShiftTab {
             bindings = <&moPgTabUp>;
             key-positions = <6 7>;
@@ -206,6 +206,7 @@
         };
 
         //Right row2
+
         coMB1 {
             bindings = <&mkp MB1>;
             key-positions = <18 19>;
@@ -225,6 +226,7 @@
         };
 
         //Right row3
+
         coMB4 {
             bindings = <&mkp MB4>;
             key-positions = <30 31>;
@@ -244,12 +246,12 @@
         };
     };
 
-
     behaviors {
         mo1: mo1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N1>, <&kp JP_EXCL>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -257,6 +259,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N2>, <&kp JP_DQUOTE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -264,6 +267,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N3>, <&kp JP_HASH>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -271,6 +275,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N4>, <&kp JP_DOLLAR>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -278,6 +283,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N5>, <&kp JP_PERCENT>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -285,6 +291,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp JP_AMPERSAND>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -292,6 +299,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N7>, <&kp JP_QUOTE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -299,6 +307,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N8>, <&kp JP_LPAREN>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -306,6 +315,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N9>, <&kp JP_RPAREN>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -313,6 +323,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N0>, <&maSendCal>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -401,6 +412,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             tap-ms = <20>;
         };
 
@@ -423,10 +435,12 @@
         };
 
         // new behavior
+
         moL2Colon: mo_layer2_colons {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&lt 2 JP_COLON>, <&kp SEMI>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -434,6 +448,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp JP_TILDE>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -441,6 +456,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp JP_EXCL>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -448,6 +464,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PAGE_UP>, <&kp LC(LS(TAB))>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -455,6 +472,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PAGE_DOWN>, <&kp LC(TAB)>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -462,6 +480,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp JP_RPAREN>, <&kp F15>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -469,6 +488,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp JP_DQUOTE>, <&kp F16>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -476,6 +496,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp JP_EQUAL>, <&maSendNot>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -483,6 +504,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp JP_LT>, <&maSendLe>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -490,6 +512,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp JP_GT>, <&maSendGe>;
+
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -503,7 +526,7 @@
         tdMods: tap_dance_mods {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <1000>;
             bindings = <&kp LC(LSHIFT)>, <&kp LC(LALT)>, <&kp LS(LALT);
         };
 
@@ -514,7 +537,7 @@
             bindings = <&mt LCTRL LANG1>, <&kp LANG2>;
         };
 
-         keymap {
+        keymap {
             compatible = "zmk,keymap";
 
             default_layer {
@@ -522,25 +545,27 @@
                 // moComTil:1tap=>,(~)
                 // moDotEx:1tap=>.(!)
                 // tdMods:1hold=>sift+Ctrl,2hold=>Ctrl+Alt,3hold=>Shift+Alt
+
                 bindings = <
-                        //  RowL1     RowL2      RowL3     RowL4    RowL5           RowM1             RowM2        RowR1        RowR2   RowR3      RowR4     RowR5
-                            &kp Q     &kp W      &kp E     &kp R    &kp T                                          &kp Y        &kp U   &kp I      &kp O     &kp P
-                            &kp A     &kp S      &kp D     &kp F    &kp G           &msc MB3          &none        &kp H        &kp J   &kp K      &kp L     &moL2Colon
-                            &kp Z     &kp X      &kp C     &kp V    &kp B           &kp WIN_PS        &none        &kp N        &kp M   &moComTil  &moDotEx  &lt 3 SLASH
-                            &kp LALT  &lt 4 F13  &kp LGUI  &tdMods  &mt LCTRL TAB   &mt LSHIFT SPACE  &lt 2 F13    &lt 1 ENTER                               &kp JP_BSLH
+&kp Q     &kp W      &kp E     &kp R    &kp T                                              &kp Y        &kp U  &kp I      &kp O     &kp P
+&kp A     &kp S      &kp D     &kp F    &kp G          &msc MB3              &none         &kp H        &kp J  &kp K      &kp L     &moL2Colon
+&kp Z     &kp X      &kp C     &kp V    &kp B          &kp WIN_PS            &none         &kp N        &kp M  &moComTil  &moDotEx  &lt 3 SLASH
+&kp LALT  &lt 4 F13  &kp LGUI  &tdMods  &mt LCTRL TAB  &mt LSHIFT SPACE      &mt LALT F13  &lt 1 ENTER                              &kp JP_BSLH
                 >;
-                 sensor-bindings = <&scroll_up_down>;
+
+                sensor-bindings = <&scroll_up_down>;
             };
 
             layer_1 {
                 // F14:Date
+
                 bindings = <
-                        //  RowL1            RowL2  RowL3              RowL4    RowL5          RowM1                RowM2          RowR1   RowR2          RowR3      RowR4         RowR5
-                            &kp COMMA        &mo7   &mo8               &mo9     &kp LS(LC(N))                                      &none   &moPgTabUp     &kp UP     &moPgTabDown  &kp LC(SPACE)
-                            &kp KP_DOT       &mo4   &mo5               &mo6     &kp F2         &kp C_MUTE           &kp C_PP       &none   &kp LEFT       &kp DOWN   &kp RIGHT     &kp LS(SPACE)
-                            &mo0             &mo1   &mo2               &mo3     &kp F14        &kp C_PREVIOUS       &kp C_NEXT     &none   &kp HOME       &kp K_APP  &kp END       &none
-                            &mt LALT WIN_PS  &none  &mt LGUI WIN_TRIM  &trans   &tdCtrlTdIme   &mt LSHIFT WIN_CLIP  &kp WIN_VOICE  &trans                                          &none
+&kp COMMA        &mo7   &mo8               &mo9    &kp LS(LC(N))                                          &none   &moPgTabUp  &kp UP     &moPgTabDown  &kp LC(SPACE)
+&kp KP_DOT       &mo4   &mo5               &mo6    &kp F2         &kp C_MUTE               &kp C_PP       &none   &kp LEFT    &kp DOWN   &kp RIGHT     &kp LS(SPACE)
+&mo0             &mo1   &mo2               &mo3    &kp F14        &kp C_PREVIOUS           &kp C_NEXT     &none   &kp HOME    &kp K_APP  &kp END       &none
+&mt LALT WIN_PS  &none  &mt LGUI WIN_TRIM  &trans  &tdCtrlTdIme   &mt LSHIFT WIN_CLIP      &kp WIN_VOICE  &trans                                       &none
                 >;
+
                 sensor-bindings = <&volume_up_down>;
             };
 
@@ -548,46 +573,38 @@
                 // F14:Date
                 // F15:WrapBracketSwitch
                 // F16:WrapQuoteSwitch
+
                 bindings = <
-                        //  RowL1            RowL2            RowL3                RowL4             RowL5              RowM1                 RowM2   RowR1            RowR2          RowR3            RowR4             RowR5
-                            &kp JP_YEN       &kp JP_DOLLAR    &kp JP_AT            &kp JP_HASH       &moLess                                          &kp JP_TILDE     &moDquF16      &kp JP_QUOTE     &kp JP_BACKQUOTE  &kp JP_EXCL
-                            &kp KP_SLASH     &kp KP_MULTIPLY  &kp KP_MINUS         &kp KP_PLUS       &moEq              &none                 &none   &kp JP_UNSCO     &kp JP_LPAREN  &kp JP_LBRACKET  &kp JP_LBRACE     &trans
-                            &kp JP_PERCENT   &kp JP_CARET     &kp JP_PIPE          &kp JP_AMPERSAND  &moGreater         &none                 &none   &kp KP_MINUS     &moRParF15     &kp JP_RBRACKET  &kp JP_RBRACE     &kp JP_QUESTION
-                            &mt LALT WIN_RS  &none            &mt LGUI WIN_TRIM_R  &trans            &mt LCTRL WIN_TOP  &mt LSHIFT WIN_PASTE  &trans  &kp WIN_CMDP                                                       &none
+&kp JP_YEN       &kp JP_DOLLAR    &kp JP_AT            &kp JP_HASH       &moLess                                              &kp JP_TILDE  &moDquF16      &kp JP_QUOTE     &kp JP_BACKQUOTE  &kp JP_EXCL
+&kp KP_SLASH     &kp KP_MULTIPLY  &kp KP_MINUS         &kp KP_PLUS       &moEq              &none                     &none   &kp JP_UNSCO  &kp JP_LPAREN  &kp JP_LBRACKET  &kp JP_LBRACE     &trans
+&kp JP_PERCENT   &kp JP_CARET     &kp JP_PIPE          &kp JP_AMPERSAND  &moGreater         &none                     &none   &kp KP_MINUS  &moRParF15     &kp JP_RBRACKET  &kp JP_RBRACE     &kp JP_QUESTION
+&mt LALT WIN_RS  &none            &mt LGUI WIN_TRIM_R  &trans            &mt LCTRL WIN_TOP  &mt LSHIFT WIN_PASTE      &trans  &kp WIN_CMDP                                                    &none
                 >;
+
                 sensor-bindings = <&cyCz>;
             };
 
             layer_3 {
                 bindings = <
-                // F17:window max
-                // F18:window resize
-                // F19:APP
-                // F20:APP
-                // F21:APP
-                        //  RowL1    RowL2   RowL3     RowL4   RowL5      RowM1       RowM2  RowR1  RowR2             RowR3    RowR4              RowR5
-                            &kp F12  &kp F7  &kp F8    &kp F9  &none                         &none  &kp LG(LS(LEFT))  &kp F17  &kp LG(LS(RIGHT))  &none
-                            &kp F11  &kp F4  &kp F5    &kp F6  &none      &none       &none  &none  &kp LG(LEFT)      &kp F18  &kp LG(RIGHT)      &none
-                            &kp F10  &kp F1  &kp F2    &kp F3  &none      &none       &none  &none  &kp F19           &kp F20  &kp F21            &trans
-                            &trans   &none   &kp LGUI  &trans  &kp LCTRL  &kp LSHIFT  &none  &none  &none                                         &none
+&kp F12  &kp F7  &kp F8    &kp F9  &none                             &none  &kp LG(LS(LEFT))  &kp F17  &kp LG(LS(RIGHT))  &none
+&kp F11  &kp F4  &kp F5    &kp F6  &none      &none           &none  &none  &kp LG(LEFT)      &kp F18  &kp LG(RIGHT)      &none
+&kp F10  &kp F1  &kp F2    &kp F3  &none      &none           &none  &none  &kp F19           &kp F20  &kp F21            &trans
+&trans   &none   &kp LGUI  &trans  &kp LCTRL  &kp LSHIFT      &none  &none                                                &none
                 >;
+
                 sensor-bindings = <&bri_up_down>;
             };
 
             layer_4 {
                 bindings = <
-                // F22:AhkSuspend
-                // F23:AhkReload
-                // F24:AhkShowKeyList
-                        //  RowL1           RowL2         RowL3          RowL4         RowL5    RowM1  RowM2    RowR1  RowR2  RowR3  RowR4  RowR5
-                            &bt BT_CLR_ALL  &none         &none          &none         &kp F24                  &none  &none  &none  &none  &none
-                            &bt BT_CLR      &bt BT_SEL 4  &none          &none         &kp F23  &none  &none    &none  &none  &none  &none  &none
-                            &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &kp F22  &none  &none    &none  &none  &none  &none  &none
-                            &none           &trans        &none          &none         &none    &none  &none    &none  &none                &none
+&bt BT_CLR_ALL  &none         &none         &none         &kp F24                    &none  &none  &none  &none  &none
+&bt BT_CLR      &bt BT_SEL 4  &none         &none         &kp F23  &none      &none  &none  &none  &none  &none  &none
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp F22  &none      &none  &none  &none  &none  &none  &none
+&none           &trans        &none         &none         &none    &none      &none  &none                       &none
                 >;
+
                 sensor-bindings = <&scroll_up_down>;
             };
         };
     };
 };
-
