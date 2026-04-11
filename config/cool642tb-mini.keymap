@@ -41,12 +41,6 @@
 #define JP_PERCENT      LS(N5)            // %
 #define JP_LT           LS(COMMA)         // <
 #define JP_GT           LS(DOT)           // >
-#define WIN_VOICE       LG(H)             // input voice
-#define WIN_PASTE       LG(LS(V))         // advanced paste(power toys)
-#define WIN_TOP         LG(LC(T))         // always window top(power toys)
-#define WIN_TRIM        LG(LC(LS(T)))     // window trim(power toys)
-#define WIN_TRIM_R      LG(LC(LS(R)))     // window live trim(power toys)
-#define WIN_CMDP        LG(LA(SPACE))     // command palette(power toys)
 
 &mt {
     flavor = "hold-preferred";
@@ -557,10 +551,10 @@
                 // F14:Date
 
                 bindings = <
-&kp COMMA        &mo7   &mo8                  &mo9    &kp LS(LC(N))                                          &none   &moPgTabUp  &kp UP     &moPgTabDown  &kp LC(SPACE)
-&kp KP_DOT       &mo4   &mo5                  &mo6    &kp F2         &kp C_MUTE               &kp C_PP       &none   &kp LEFT    &kp DOWN   &kp RIGHT     &kp LS(SPACE)
-&mo0             &mo1   &mo2                  &mo3    &kp F14        &kp C_PREVIOUS           &kp C_NEXT     &none   &kp HOME    &kp K_APP  &kp END       &none
-&mt LALT LG(LS(T))  &none  &mt LGUI WIN_TRIM  &trans  &tdCtrlTdIme   &mt LSHIFT LG(V)         &kp WIN_VOICE  &trans                                       &none
+&kp COMMA           &mo7   &mo8                    &mo9    &kp LS(LC(N))                                          &none   &moPgTabUp  &kp UP     &moPgTabDown  &kp LC(SPACE)
+&kp KP_DOT          &mo4   &mo5                    &mo6    &kp F2         &kp C_MUTE               &kp C_PP       &none   &kp LEFT    &kp DOWN   &kp RIGHT     &kp LS(SPACE)
+&mo0                &mo1   &mo2                    &mo3    &kp F14        &kp C_PREVIOUS           &kp C_NEXT     &none   &kp HOME    &kp K_APP  &kp END       &none
+&mt LALT LG(LS(T))  &none  &mt LGUI LG(LC(LS(T)))  &trans  &tdCtrlTdIme   &mt LSHIFT LG(V)         &kp LG(H)      &trans                                       &none
                 >;
 
                 sensor-bindings = <&volume_up_down>;
@@ -575,7 +569,7 @@
 &kp JP_YEN       &kp JP_DOLLAR    &kp JP_AT            &kp JP_HASH       &moLess                                              &kp JP_TILDE  &moDquF16      &kp JP_QUOTE     &kp JP_BACKQUOTE  &kp JP_EXCL
 &kp KP_SLASH     &kp KP_MULTIPLY  &kp KP_MINUS         &kp KP_PLUS       &moEq              &none                     &none   &kp JP_UNSCO  &kp JP_LPAREN  &kp JP_LBRACKET  &kp JP_LBRACE     &trans
 &kp JP_PERCENT   &kp JP_CARET     &kp JP_PIPE          &kp JP_AMPERSAND  &moGreater         &none                     &none   &kp KP_MINUS  &moRParF15     &kp JP_RBRACKET  &kp JP_RBRACE     &kp JP_QUESTION
-&mt LALT LG(LS(R))  &none         &mt LGUI WIN_TRIM_R  &trans            &mt LCTRL WIN_TOP  &mt LSHIFT LG(LC(LA(V)))  &trans  &kp WIN_CMDP                                                    &none
+&mt LALT LG(LS(R))  &none         &mt LGUI LG(LC(LS(R)))  &trans            &mt LCTRL LG(LC(T))  &mt LSHIFT LG(LC(LA(V)))  &trans  &kp LG(LA(SPACE))                                                    &none
                 >;
 
                 sensor-bindings = <&cyCz>;
