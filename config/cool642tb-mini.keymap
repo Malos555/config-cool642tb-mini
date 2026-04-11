@@ -169,19 +169,6 @@
         };
 
         //Left row4
-
-        coCtAl {
-            bindings = <&kp LC(LALT)>;
-            key-positions = <43 44>;
-            layers = <0 1 2 3 4>;
-        };
-
-        coShAl {
-            bindings = <&kp LS(LALT)>;
-            key-positions = <44 45>;
-            layers = <0 1 2 3 4>;
-        };
-
         //Right row1
 
         coPageupShiftTab {
@@ -551,10 +538,10 @@
                 // F14:Date
 
                 bindings = <
-&kp COMMA           &mo7   &mo8                    &mo9    &kp LS(LC(N))                                          &none   &moPgTabUp  &kp UP     &moPgTabDown  &kp LC(SPACE)
-&kp KP_DOT          &mo4   &mo5                    &mo6    &kp F2         &kp C_MUTE               &kp C_PP       &none   &kp LEFT    &kp DOWN   &kp RIGHT     &kp LS(SPACE)
-&mo0                &mo1   &mo2                    &mo3    &kp F14        &kp C_PREVIOUS           &kp C_NEXT     &none   &kp HOME    &kp K_APP  &kp END       &none
-&mt LALT LG(LS(T))  &none  &mt LGUI LG(LC(LS(T)))  &trans  &tdCtrlTdIme   &mt LSHIFT LG(V)         &kp LG(H)      &trans                                       &none
+&kp COMMA           &mo7   &mo8                    &mo9    &kp LS(LC(N))                                    &none   &moPgTabUp  &kp UP     &moPgTabDown  &kp LC(SPACE)
+&kp KP_DOT          &mo4   &mo5                    &mo6    &kp F2         &kp C_MUTE            &kp C_PP    &none   &kp LEFT    &kp DOWN   &kp RIGHT     &kp LS(SPACE)
+&mo0                &mo1   &mo2                    &mo3    &kp F14        &kp C_PREVIOUS        &kp C_NEXT  &none   &kp HOME    &kp K_APP  &kp END       &none
+&mt LALT LG(LS(T))  &none  &mt LGUI LG(LC(LS(T)))  &trans  &tdCtrlTdIme   &mt LSHIFT LG(V)      &kp LG(H)   &trans                                       &none
                 >;
 
                 sensor-bindings = <&volume_up_down>;
@@ -566,10 +553,10 @@
                 // F16:WrapQuoteSwitch
 
                 bindings = <
-&kp JP_YEN       &kp JP_DOLLAR    &kp JP_AT            &kp JP_HASH       &moLess                                              &kp JP_TILDE  &moDquF16      &kp JP_QUOTE     &kp JP_BACKQUOTE  &kp JP_EXCL
-&kp KP_SLASH     &kp KP_MULTIPLY  &kp KP_MINUS         &kp KP_PLUS       &moEq              &none                     &none   &kp JP_UNSCO  &kp JP_LPAREN  &kp JP_LBRACKET  &kp JP_LBRACE     &trans
-&kp JP_PERCENT   &kp JP_CARET     &kp JP_PIPE          &kp JP_AMPERSAND  &moGreater         &none                     &none   &kp KP_MINUS  &moRParF15     &kp JP_RBRACKET  &kp JP_RBRACE     &kp JP_QUESTION
-&mt LALT LG(LS(R))  &none         &mt LGUI LG(LC(LS(R)))  &trans            &mt LCTRL LG(LC(T))  &mt LSHIFT LG(LC(LA(V)))  &trans  &kp LG(LA(SPACE))                                                    &none
+&kp JP_YEN          &kp JP_DOLLAR    &kp JP_AT               &kp JP_HASH       &moLess                                                    &kp JP_TILDE       &moDquF16      &kp JP_QUOTE     &kp JP_BACKQUOTE  &kp JP_EXCL
+&kp KP_SLASH        &kp KP_MULTIPLY  &kp KP_MINUS            &kp KP_PLUS       &moEq                &none                         &none   &kp JP_UNSCO       &kp JP_LPAREN  &kp JP_LBRACKET  &kp JP_LBRACE     &trans
+&kp JP_PERCENT      &kp JP_CARET     &kp JP_PIPE             &kp JP_AMPERSAND  &moGreater           &none                         &none   &kp KP_MINUS       &moRParF15     &kp JP_RBRACKET  &kp JP_RBRACE     &kp JP_QUESTION
+&mt LALT LG(LS(R))  &none            &mt LGUI LG(LC(LS(R)))  &trans            &mt LCTRL LG(LC(T))  &mt LSHIFT LG(LC(LA(V)))      &trans  &kp LG(LA(SPACE))                                                    &none
                 >;
 
                 sensor-bindings = <&cyCz>;
@@ -577,10 +564,10 @@
 
             layer_3 {
                 bindings = <
-&kp F12  &kp F7  &kp F8    &kp F9  &none                                       &none  &kp LG(LS(LEFT))  &kp F17  &kp LG(LS(RIGHT))  &none
-&kp F11  &kp F4  &kp F5    &kp F6  &none      &none                     &none  &none  &kp LG(LEFT)      &kp F18  &kp LG(RIGHT)      &none
-&kp F10  &kp F1  &kp F2    &kp F3  &none      &none                     &none  &none  &kp F19           &kp F20  &kp F21            &trans
-&trans   &none   &kp LGUI  &trans  &kp LCTRL  mt LSHIFT LG(LS(V))       &none  &none                                                &none
+&kp F12  &kp F7  &kp F8    &kp F9  &none                                            &none  &kp LG(LS(LEFT))  &kp F17  &kp LG(LS(RIGHT))  &none
+&kp F11  &kp F4  &kp F5    &kp F6  &none                          &none      &none  &none  &kp LG(LEFT)      &kp F18  &kp LG(RIGHT)      &none
+&kp F10  &kp F1  &kp F2    &kp F3  &none                          &none      &none  &none  &kp F19           &kp F20  &kp F21            &trans
+&trans   &none   &kp LGUI  &trans  &kp LCTRL mt LSHIFT LG(LS(V))  &none      &none  &none
                 >;
 
                 sensor-bindings = <&bri_up_down>;
@@ -589,9 +576,9 @@
             layer_4 {
                 bindings = <
 &bt BT_CLR_ALL  &none         &none         &none         &none                    &none  &none  &none  &none  &none
-&bt BT_CLR      &bt BT_SEL 4  &none         &none         &none    &none      &none  &none  &none  &none  &none  &none
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none    &none      &none  &none  &none  &none  &none  &none
-&none           &trans        &none         &none         &none    &none      &none  &none                       &none
+&bt BT_CLR      &bt BT_SEL 4  &none         &none         &none  &none      &none  &none  &none  &none  &none  &none
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none      &none  &none  &none  &none  &none  &none
+&none           &trans        &none         &none         &none  &none      &none  &none                       &none
                 >;
 
                 sensor-bindings = <&scroll_up_down>;
