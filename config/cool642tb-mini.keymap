@@ -526,9 +526,9 @@
 
                 bindings = <
 &kp Q     &kp W      &kp E     &kp R    &kp T                                           &kp Y        &kp U  &kp I      &kp O     &kp P
-&kp A     &kp S      &kp D     &kp F    &kp G          &msc MB3              &none      &kp H        &kp J  &kp K      &kp L     &moL2Colon
-&kp Z     &kp X      &kp C     &kp V    &kp B          &kp F2                &none      &kp N        &kp M  &moComTil  &moDotEx  &lt 3 SLASH
-&kp LALT  &lt 4 F13  &kp LGUI  &tdMods  &mt LCTRL TAB  &mt LSHIFT SPACE      &lt 3 F13  &lt 1 ENTER                              &kp JP_BSLH
+&kp A     &kp S      &kp D     &kp F    &kp G      &msc MB3              &none      &kp H        &kp J  &kp K      &kp L     &moL2Colon
+&kp Z     &kp X      &kp C     &kp V    &kp B      &kp F2                &none      &kp N        &kp M  &moComTil  &moDotEx  &lt 3 SLASH
+&kp LALT  &lt 4 F13  &kp LGUI  &tdMods  &kp LCTRL  &mt LSHIFT SPACE      &lt 3 TAB  &lt 1 ENTER                              &kp LALT
                 >;
 
                 sensor-bindings = <&scroll_up_down>;
@@ -538,10 +538,10 @@
                 // F14:Date
 
                 bindings = <
-&kp COMMA           &mo7   &mo8                    &mo9    &kp LS(LC(N))                                    &none   &moPgTabUp  &kp UP     &moPgTabDown  &kp LC(SPACE)
-&kp KP_DOT          &mo4   &mo5                    &mo6    &kp F2         &kp C_MUTE            &kp C_PP    &none   &kp LEFT    &kp DOWN   &kp RIGHT     &kp LS(SPACE)
-&mo0                &mo1   &mo2                    &mo3    &kp F14        &kp C_PREVIOUS        &kp C_NEXT  &none   &kp HOME    &kp K_APP  &kp END       &none
-&mt LALT LG(LS(T))  &none  &mt LGUI LG(LC(LS(T)))  &trans  &tdCtrlTdIme   &mt LSHIFT LG(V)      &kp LG(H)   &trans                                       &none
+&kp COMMA       &mo7   &mo8                    &mo9    &kp LS(LC(N))                                    &none   &moPgTabUp  &kp UP     &moPgTabDown  &kp LC(SPACE)
+&kp KP_DOT      &mo4   &mo5                    &mo6    &kp F2         &kp C_MUTE            &kp C_PP    &none   &kp LEFT    &kp DOWN   &kp RIGHT     &kp LS(SPACE)
+&mo0            &mo1   &mo2                    &mo3    &kp F14        &kp C_PREVIOUS        &kp C_NEXT  &none   &kp HOME    &kp K_APP  &kp END       &none
+&mt LALT PSCRN  &none  &mt LGUI LG(LC(LS(T)))  &trans  &tdCtrlTdIme   &mt LSHIFT LG(V)      &kp LG(H)   &trans                                       &none
                 >;
 
                 sensor-bindings = <&volume_up_down>;
@@ -553,7 +553,7 @@
                 // F16:WrapQuoteSwitch
 
                 bindings = <
-&kp JP_YEN          &kp JP_DOLLAR    &kp JP_AT               &kp JP_HASH       &moLess                                                    &kp JP_TILDE       &moDquF16      &kp JP_QUOTE     &kp JP_BACKQUOTE  &kp JP_EXCL
+&kp JP_BSLH         &kp JP_DOLLAR    &kp JP_AT               &kp JP_HASH       &moLess                                                    &kp JP_TILDE       &moDquF16      &kp JP_QUOTE     &kp JP_BACKQUOTE  &kp JP_EXCL
 &kp KP_SLASH        &kp KP_MULTIPLY  &kp KP_MINUS            &kp KP_PLUS       &moEq                &none                         &none   &kp JP_UNSCO       &kp JP_LPAREN  &kp JP_LBRACKET  &kp JP_LBRACE     &trans
 &kp JP_PERCENT      &kp JP_CARET     &kp JP_PIPE             &kp JP_AMPERSAND  &moGreater           &none                         &none   &kp KP_MINUS       &moRParF15     &kp JP_RBRACKET  &kp JP_RBRACE     &kp JP_QUESTION
 &mt LALT LG(LS(R))  &none            &mt LGUI LG(LC(LS(R)))  &trans            &mt LCTRL LG(LC(T))  &mt LSHIFT LG(LC(LA(V)))      &trans  &kp LG(LA(SPACE))                                                    &none
