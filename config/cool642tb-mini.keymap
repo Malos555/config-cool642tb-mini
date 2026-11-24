@@ -522,9 +522,9 @@
                 // F14:Date
 
                 bindings = <
-&kp COMMA       &mo7   &mo8                    &mo9    &kp F15                                          &none     &moPgTabUp  &kp UP     &moPgTabDown  &kp LC(SPACE)
-&kp KP_DOT      &mo4   &mo5                    &mo6    &kp F2         &kp C_MUTE            &kp C_PP    &kp F14   &kp LEFT    &kp DOWN   &kp RIGHT     &kp LS(SPACE)
-&mo0            &mo1   &mo2                    &mo3    &kp F14        &kp C_PREVIOUS        &kp C_NEXT  &kp F15   &kp HOME    &kp K_APP  &kp END       &none
+&kp COMMA       &mo7   &mo8                    &mo9    &kp F15                                          &kp F21   &moPgTabUp  &kp UP     &moPgTabDown  &kp LC(SPACE)
+&kp KP_DOT      &mo4   &mo5                    &mo6    &kp F2         &kp C_MUTE            &kp C_PP    &kp F20   &kp LEFT    &kp DOWN   &kp RIGHT     &kp LS(SPACE)
+&mo0            &mo1   &mo2                    &mo3    &kp F14        &kp C_PREVIOUS        &kp C_NEXT  &kp F19   &kp HOME    &kp K_APP  &kp END       &none
 &mt LALT PSCRN  &none  &mt LGUI LG(LC(LS(T)))  &trans  &tdCtrlTdIme   &mt LSHIFT LG(V)      &trans      &trans                                         &none
                 >;
 
