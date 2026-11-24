@@ -414,10 +414,10 @@
 
         // new behavior
 
-        moL2Colon: mo_layer2_colons {
+        moColonSemi: mo_layer2_colons {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&lt 2 JP_COLON>, <&kp SEMI>;
+            bindings = <&kp JP_COLON>, <&kp SEMI>;
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
@@ -510,7 +510,7 @@
 
                 bindings = <
 &kp Q     &kp W      &kp E     &kp R    &kp T                                             &kp Y        &kp U  &kp I      &kp O     &kp P
-&kp A     &kp S      &kp D     &kp F    &kp G          &msc MB3              &none        &kp H        &kp J  &kp K      &kp L     &moL2Colon
+&kp A     &kp S      &kp D     &kp F    &kp G          &msc MB3              &none        &kp H        &kp J  &kp K      &lt 2 L   &moColonSemi
 &kp Z     &kp X      &kp C     &kp V    &kp B          &kp F2                &none        &kp N        &kp M  &moComTil  &moDotEx  &lt 3 SLASH
 &kp LALT  &lt 4 F13  &kp LGUI  &tdMods  &mt LCTRL TAB  &mt LSHIFT SPACE      &lt 3 LCTRL  &lt 1 ENTER                              &kp LALT
                 >;
@@ -536,9 +536,9 @@
                 // F15:WrapQuoteSwitch
 
                 bindings = <
-&kp JP_BSLH         &kp JP_DOLLAR    &kp JP_AT               &kp JP_HASH       &moLess                                                       &kp JP_TILDE       &kp JP_DQUOTE  &kp JP_QUOTE     &kp JP_BACKQUOTE  &kp JP_EXCL
-&kp KP_SLASH        &kp KP_MULTIPLY  &kp KP_MINUS            &kp KP_PLUS       &moEq                &none                         &none      &kp JP_UNSCO       &kp JP_LPAREN  &kp JP_LBRACKET  &kp JP_LBRACE     &trans
-&kp JP_PERCENT      &kp JP_CARET     &kp JP_PIPE             &kp JP_AMPERSAND  &moGreater           &none                         &none      &kp KP_MINUS       &kp JP_RPAREN  &kp JP_RBRACKET  &kp JP_RBRACE     &kp JP_QUESTION
+&kp JP_BSLH         &kp JP_DOLLAR    &kp JP_AT               &kp JP_HASH       &moLess                                                       &kp JP_TILDE       &kp JP_DQUOTE  &kp JP_QUOTE     &kp JP_EXCL       &kp JP_BACKQUOTE 
+&kp KP_SLASH        &kp KP_MULTIPLY  &kp KP_MINUS            &kp KP_PLUS       &moEq                &none                         &none      &kp JP_UNSCO       &kp JP_LPAREN  &kp JP_LBRACKET  &trans            &kp JP_LBRACE
+&kp JP_PERCENT      &kp JP_CARET     &kp JP_PIPE             &kp JP_AMPERSAND  &moGreater           &none                         &none      &kp KP_MINUS       &kp JP_RPAREN  &kp JP_RBRACKET  &kp JP_QUESTION   &kp JP_RBRACE
 &mt LALT LG(LS(R))  &none            &mt LGUI LG(LC(LS(R)))  &trans            &mt LCTRL LG(LC(T))  &mt LSHIFT LG(LC(LA(V)))      &kp LG(H)  &kp LG(LA(SPACE))                                                    &none
                 >;
 
